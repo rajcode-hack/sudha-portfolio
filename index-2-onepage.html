@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Ventix - Personal Portfolio Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Ventix - Personal Portfolio Template</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/flaticon-set.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/animate.min.css" rel="stylesheet">
+    <link href="assets/css/validnavs.css" rel="stylesheet">
+    <link href="assets/css/helper.css" rel="stylesheet">
+    <link href="assets/css/unit-test.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- ========== End Stylesheet ========== -->
+
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+<style>
+/* tech skill */
+
+/* SECTION */
+.tech-stack-section {
+    background: radial-gradient(circle at right, #0f2b3a, #0b0f12);
+    color: #fff;
+}
+
+/* TITLE */
+.stack-eyebrow {
+    color: #2cff9e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.stack-heading {
+    font-size: 48px;
+    margin: 12px 0 50px;
+}
+
+/* GRID FIX */
+.stack-layout {
+    margin-top: 10px;
+}
+
+/* CARD */
+.stack-box {
+    position: relative;
+    height: 100%;
+    padding: 30px 28px;
+    border-radius: 18px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* GLOW */
+.stack-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(44,255,158,0.28),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.stack-box:hover::before {
+    opacity: 1;
+}
+
+.stack-box:hover {
+    transform: translateY(-10px);
+    border-color: rgba(44,255,158,0.4);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+}
+
+/* TEXT */
+.stack-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.stack-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.stack-box strong {
+    color: #2cff9e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .stack-heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .stack-heading {
+        font-size: 34px;
+    }
+}
+
+
+/*  */
+
+
+/* about me */
+.skills-area {
+    padding: 120px 0;
+    background: radial-gradient(circle at top right, #1b2a2f, #0b0f12);
+    color: #fff;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-card .avatar img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.profile-card .email {
+    display: block;
+    margin-top: 8px;
+    color: #2cff9e;
+    font-size: 14px;
+}
+
+.profile-card .location {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.role-badge {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.4);
+    padding: 14px;
+    border-radius: 14px;
+}
+
+.role-badge span {
+    display: block;
+    font-weight: 600;
+}
+
+.role-badge small {
+    opacity: 0.7;
+}
+
+/* RIGHT SIDE */
+.skills-content .section-tag {
+    color: #2cff9e;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.section-title {
+    font-size: 48px;
+    margin: 12px 0 40px;
+}
+
+/* SKILL CARDS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background: #ffffff;
+    color: #222;
+    padding: 26px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+}
+
+
+/* tool platform */
+
+.tools-matrix-section {
+    background: radial-gradient(circle at left, #0d2634, #0b0f12);
+    color: #fff;
+}
+
+/* PANEL */
+.tool-panel {
+    position: relative;
+    height: 100%;
+    padding: 28px 30px;
+    border-radius: 16px;
+    background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0.015)
+    );
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+/* LEFT NEON BAR */
+.tool-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        #2cff9e,
+        transparent
+    );
+    opacity: 0.6;
+}
+
+/* HOVER */
+.tool-panel:hover {
+    transform: translateY(-8px);
+    border-color: rgba(44,255,158,0.4);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+}
+
+/* TEXT */
+.tool-panel h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.tool-panel p {
+    font-size: 14.8px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.85);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .tool-panel {
+        padding: 24px;
+    }
+}
+
+
+
+</style>
+
+</head>
+
+<body class="bg-dark bg-fixed onepage-version" style="background-image: url(assets/img/shape/banner-1.png);">
+
+    <!-- Start Preloader 
+    ============================================= -->
+    <div id="preloader">
+        <div id="ventix-preloader" class="ventix-preloader">
+            <div class="animation-preloader">
+                <div class="spinner"></div>
+            </div>
+            <div class="loader">
+                <div class="row">
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-left">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                    <div class="col-3 loader-section section-right">
+                        <div class="bg"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    
+    <!-- Header 
+    ============================================= -->
+    <header>
+        <!-- Start Navigation -->
+        <nav class="navbar mobile-sidenav onepage-menu mobile-nav-only attr-border navbar-sticky navbar-default validnavs navbar-fixed dark no-background">
+
+
+            <div class="container d-flex justify-content-between align-items-center">            
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="assets/img/logo-light.png" class="logo" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+
+                    <img src="assets/img/logo-light.png" alt="Logo">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-times"></i>
+                    </button>
+                    
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <li>
+                            <a class="smooth-menu" href="#home">Home</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#services">Services</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#about">About</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#blog">blog</a>
+                        </li>
+                        <li>
+                            <a class="smooth-menu" href="#contact">contact</a>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+
+                <!-- Main Nav -->
+            </div>   
+            <!-- Overlay screen for menu -->
+            <div class="overlay-screen"></div>
+            <!-- End Overlay screen for menu -->
+        </nav>
+        <!-- End Navigation -->
+    </header>
+    <!-- End Header -->
+
+    <div class="main-wrapper">
+        <!-- Start Side Navbar 
+        ============================================= -->
+        <div class="side-navbar-items">
+
+            <div class="nav-wrapper">
+                <div class="side-navbar">
+                    <div class="side-nav-menu">
+                        <a class="smooth-menu" href="#home"><img src="assets/img/logo-icon.png" alt="Logo"></a>
+                    </div>
+                    <div class="nav-toggle">
+                        <img src="assets/img/menu-white.svg" alt="Menu">
+                    </div>
+                    <div class="author-social">
+                        <input type="checkbox" id="toggle" class="share-toggle" hidden="">
+                        <label for="toggle" class="share-button">
+                            <i class="fas fa-plus"></i>
+                        </label>
+                        <a href="#" class="share-icon facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="share-icon twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="share-icon instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="container">
+                <div class="nav-side">
+                    <div class="nav-items simple-menu">
+
+                        <div class="nav-toggle"><i class="fas fa-times"></i></div>
+
+
+                        <div class="nav-item dropdown">
+                            <a class="smooth-menu" href="#home">Home</a>
+                            <a class="dropdown-toggle" href="#"><i class="fas fa-plus"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Home vCard</a></li>
+                                <li><a href="index-onepage.html">Home Onepage</a></li>
+                                <li><a href="index-light.html">Home vCard Light</a></li>
+                                <li><a href="index-light-onepage.html">Home Onepage Light</a></li>
+                                <li><a href="index-2.html">Home Two vCard</a></li>
+                                <li><a href="index-2-onepage.html">Home Two Onepage</a></li>
+                                <li><a href="index-2-light.html">Home Two vCard Light</a></li>
+                                <li><a href="index-2-onepage-light.html">Home Two Onepage Light</a></li>
+                            </ul>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+                        <div class="nav-item">
+                            <a class="smooth-menu" href="#services">Services</a>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+                        <div class="nav-item">
+                            <a class="smooth-menu" href="#about">About</a>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+                        <div class="nav-item">
+                            <a class="smooth-menu" href="#portfolio">Portfolio</a>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+                        <div class="nav-item">
+                            <a class="smooth-menu" href="#blog">Blog</a>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+                        <div class="nav-item">
+                            <a class="smooth-menu" href="#contact">Contact</a>
+                            <div class="nav-item-wrapper"></div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Side Navbar -->
+
+        <!-- Start Banner
+        ============================================= -->
+<!-- Start Banner -->
+<div id="home" class="banner-style-two-area default-padding"
+     style="background-image: url(assets/img/shape/8.png);">
+
+    <div class="personal-social">
+        <ul>
+            <li class="linkedin">
+                <a href="https://linkedin.com/in/jaya-simha-goud-dindu-264416221" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="github">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="email">
+                <a href="mailto:jayasimhagoudd@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="author-thumb"
+         style="background-image: url(assets/img/illustration/5.png);">
+    </div>
+
+    <div class="container">
+        <div class="banner-top">
+            <div class="row">
+                <div class="col-lg-7 pr-50">
+                    <div class="information">
+                        <div class="content">
+
+                            <h2 style="font-size:48px;">
+                                Hey <img src="assets/img/shape/harnd.png" alt="">, I'm <br>
+                                Jaya Simha Goud Dindu
+                            </h2>
+
+                            <h3 class="title">
+                                <span class="cd-headline clip is-full-width">
+                                    <span class="cd-words-wrapper">
+                                        <b class="is-visible">Golang & Java Backend Engineer</b>
+                                        <b class="is-hidden">Cloud-Native Microservices Developer</b>
+                                        <b class="is-hidden">Distributed Systems Specialist</b>
+                                    </span>
+                                </span>
+                            </h3>
+
+                            <p class="mt-20">
+                                Backend-focused Full-Stack Engineer with strong experience
+                                building scalable microservices, real-time data pipelines,
+                                and production-grade AWS infrastructure.
+                            </p>
+
+                            <div class="mt-30">
+                                <a href="#contact" class="btn-standard smooth-menu">Hire Me</a>
+                                <a href="assets/resume/Jaya_Simha_Goud_Dindu.pdf"
+                                   class="btn btn-border light ml-15"
+                                   target="_blank">
+                                    Download Resume
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Banner -->
+
+        <!-- End Side Navbar -->
+
+        <!-- Start Expertise
+        ============================================= -->
+<!-- Start Expertise -->
+<section id="skills" class="tech-stack-section default-padding">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="stack-eyebrow">SKILLS</span>
+                <h2 class="stack-heading">Technical Stack</h2>
+            </div>
+        </div>
+
+        <div class="row stack-layout">
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Languages</h4>
+                    <p><strong>Golang, Java</strong> (11/17), SQL, TypeScript, JavaScript</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Backend & Architecture</h4>
+                    <p>Spring Boot, Microservices, REST, gRPC, Kafka, Spark, Node.js</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Cloud & Infrastructure</h4>
+                    <p>AWS Lambda, API Gateway, Kubernetes, Terraform</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Databases</h4>
+                    <p>PostgreSQL, MongoDB, Oracle, MySQL, ClickHouse, Redis</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Frontend</h4>
+                    <p>HTML, CSS, Bootstrap, React (TS), Angular, Vue, Svelte</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="stack-box">
+                    <h4>Monitoring & Security</h4>
+                    <p>Prometheus, Grafana, CloudWatch, OAuth2, JWT, Spring Security</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- End Expertise -->
+
+        <!-- End  Expertsie -->
+
+        <!-- Start Services
+        ============================================= -->
+        <div class="services-style-two-area default-padding">
+            <div class="container">
+
+                <div class="service-box">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="heading-left mb-60">
+                                <h4 class="sub-title">What i do</h4>
+                                <h2 class="title">My Specializations</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="service-style-two-items">
+                                <!-- Navigation -->
+                                <div class="services-nav">
+                                    <div class="nav-items">
+                                        <div class="services-button-prev"></div>
+                                        <div class="services-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="services-style-two-carousel swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Single item -->
+                                        <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/800x800.png);">D</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                            <h2>Backend & Microservices</h2>
+                                                            <p>
+                                                                Designing and building scalable backend systems with
+                                                                Golang and Java, optimized for performance and reliability.
+                                                            </p>
+                                                            <ul class="service-list mt-30">
+                                                                <li>Microservices Architecture</li>
+                                                                <li>REST & gRPC APIs</li>
+                                                                <li>Kafka-based Event Processing</li>
+                                                            </ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                        <!-- Single item -->
+                                        <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/800x800.png);">U</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                            <h2>Cloud & DevOps</h2>
+                                                            <p>
+                                                                Production-grade AWS infrastructure and CI/CD automation
+                                                                for high-scale applications.
+                                                            </p>
+                                                            <ul class="service-list mt-30">
+                                                                <li>AWS Lambda, API Gateway, EKS</li>
+                                                                <li>Docker, Kubernetes, Terraform</li>
+                                                                <li>Jenkins & GitHub Actions</li>
+                                                            </ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                          <!-- Single item -->
+                                          <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/800x800.png);">U</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                            <h2>Data & Streaming Pipelines</h2>
+                                                            <p>
+                                                                Real-time data pipelines handling tens of millions of events daily.
+                                                            </p>
+                                                            <ul class="service-list mt-30">
+                                                                <li>Kafka Streams & Spark</li>
+                                                                <li>Airflow Orchestration</li>
+                                                                <li>ClickHouse, Redis, PostgreSQL</li>
+                                                            </ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Services -->
+
+        <!-- Start Experience -->
+       <!-- Start Services
+        ============================================= -->
+        <div id="services" class="services-style-one-area default-padding-top mb--50">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="left-heading mb-50">
+                            <h4 class="sub-title">Career</h4>
+                            <h2 class="title">Professional Experience</h2>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/web-design.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Uber Technologies Inc.</a></h4>
+                                <span>Golang & Java Full-Stack Developer | Jul 2024 – Present</span>
+                                <p>
+                                    <ul>
+                                        <li>Built Golang & Spring Boot services for pricing.</li>
+                                        <li>Kafka & Spark pipelines processing 50M+ events/day.</li>
+                                        <li>Reduced P95 latency by 40% via concurrency & caching.</li>
+                                        <li>AWS Lambda, API Gateway, Jenkins, Kubernetes.</li>
+                                    </ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>28 Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/app-development.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Flipkart Internet Pvt Ltd</a></h4>
+                                <span>Backend Developer | Jan 2022 – Aug 2024</span>
+                                <p>
+                                    <ul>
+                                        <li>Microservices handling 10M+ daily transactions.</li>
+                                        <li>Kafka, Redis Streams, Spark & Airflow data pipelines..</li>
+                                        <li>30% API latency improvement using PostgreSQL tuning.</li>
+                                        <li>Deployed containerized services on AWS EKS.</li>
+
+
+                                    </ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>1K Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/camera.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">ICICI Lombard GIC Ltd</a></h4>
+                                <span>Full-Stack Developer | Jan 2021 – Dec 2021</span>
+                                <p>
+                                    <ul>
+                                        <li>Angular frontend with Spring Boot backend.</li>
+                                        <li>CRM & Oracle ERP integration via MuleSoft.</li>
+                                        <li>JWT authentication and Spring Security.</li>
+                                    </ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>74 Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item button">
+                            <a class="hire-btn" href="#contact">hire me</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+
+            <!-- Start Services Single Modal -->
+       
+            <!-- End Services Single Modal -->
+            
+        </div>
+       
+<!-- End Experience -->
+
+<section id="tools" class="tools-matrix-section default-padding">
+    <div class="container">
+
+        <div class="row mb-50">
+            <div class="col-lg-12">
+                <span class="section-tag">TOOLING</span>
+                <h2 class="section-title">Tools & Platforms</h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Development Tools</h4>
+                    <p>
+                        IntelliJ IDEA, VS Code, GoLand, Eclipse, Maven, Gradle, Go Modules,
+                        Swagger / OpenAPI, Postman, Lombok, MapStruct
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Cloud & DevOps</h4>
+                    <p>
+                        AWS Console, IAM, EC2, ECS, EKS, S3, Lambda, API Gateway, SAM,
+                        Terraform, Terraform Cloud, Terragrunt, Helm, Kustomize,
+                        Jenkins Pipelines, GitHub Actions, Docker, Docker Compose
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Streaming & Data</h4>
+                    <p>
+                        Kafka CLI, Kafka Connect, Kafka Streams, Apache Spark SQL,
+                        Spark MLlib, Apache Airflow UI, Redis Insight,
+                        ClickHouse Client, pgAdmin
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Observability</h4>
+                    <p>
+                        Prometheus, Alertmanager, Grafana, Grafana Loki,
+                        AWS CloudWatch, Logs Insights, Splunk Enterprise,
+                        ELK Stack, Jaeger, OpenTelemetry
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Security & Quality</h4>
+                    <p>
+                        Keycloak, HashiCorp Vault, AWS Secrets Manager,
+                        SonarQube, OWASP Dependency Check
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>UI Tooling</h4>
+                    <p>
+                        Vite, Webpack, Storybook, Chrome DevTools,
+                        Lighthouse, Angular CLI, React DevTools
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+        <!-- Start Pricing
+        ============================================= -->
+        <!-- <div class="pricing-style-one-area">
+            <div class="container">
+                <div class="row align-center">
+                    <div class="col-lg-12 col-xl-4">
+                        <div class="pricing-left">
+                            <h4 class="sub-title">Career</h4>
+                            <h2 class="title">Professional Experience</h2>
+                            <ul class="list-rating mt-50">
+                                <li>
+                                    Seller communication level
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i> 4.9
+                                    </div>
+                                </li>
+                                <li>
+                                    Recommend to a friend
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i> 5
+                                    </div>
+                                </li>
+                                <li>
+                                    Deliver on time
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i> 5
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-12 col-xl-7 offset-xl-1">
+                        <div class="pricing-style-one-items">
+
+                            <div class="nav nav-tabs pricing-tab-navs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                                    <span>Monthly</span>
+                                </button>
+                                <button class="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
+                                    <span>Yearly</span>
+                                </button>
+                            </div>
+
+                            <div class="tab-content pricing-tab-content" id="nav-tabContent"> -->
+
+                                <!-- Tab Single Item -->
+                                <!-- <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="nav-id-1">
+                                    <div class="row"> -->
+                                        <!-- Single Item -->
+                                        <!-- <div class="col-lg-6 col-md-6">
+                                            <div class="pricing-style-one">
+                                                <i class="fab fa-wordpress"></i>
+                                                <h4>WordPress Development</h4>
+                                                <ul>
+                                                    <li>1 Page with Elementor</li>
+                                                    <li>Design Customization</li>
+                                                    <li>Responsive Design</li>
+                                                </ul>
+                                                <div class="price">
+                                                    <h2><sup>$</sup>48</h2>
+                                                </div>
+                                                <a class="btn mt-25 btn-sm circle btn-border light" href="#contact">Order Now</a>
+                                            </div>
+                                        </div> -->
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <!-- <div class="col-lg-6 col-md-6">
+                                            <div class="pricing-style-one active">
+                                                <i class="fab fa-react"></i>
+                                                <h4>Static frontend design</h4>
+                                                <ul>
+                                                    <li>2 Page with React JS</li>
+                                                    <li>Design implement</li>
+                                                    <li>Responsive Design</li>
+                                                </ul>
+                                                <div class="price">
+                                                    <h2><sup>$</sup>24</h2>
+                                                </div>
+                                                <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
+                                            </div>
+                                        </div> -->
+                                        <!-- End Single Item -->
+                                    <!-- </div>
+                                </div> -->
+                                <!-- End Tab Single Item -->
+            
+                                <!-- Tab Single Item -->
+                                <!-- <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-id-2">
+                                    <div class="row"> -->
+                                        <!-- Single Item -->
+                                        <!-- <div class="col-lg-6 col-md-6">
+                                            <div class="pricing-style-one active">
+                                                <i class="fab fa-wordpress"></i>
+                                                <h4>WordPress Development</h4>
+                                                <ul>
+                                                    <li>1 Page with Elementor</li>
+                                                    <li>Design Customization</li>
+                                                    <li>Responsive Design</li>
+                                                </ul>
+                                                <div class="price">
+                                                    <h2><sup>$</sup>157</h2>
+                                                </div>
+                                                <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
+                                            </div>
+                                        </div> -->
+                                        <!-- End Single Item -->
+                                        <!-- Single Item -->
+                                        <!-- <div class="col-lg-6 col-md-6">
+                                            <div class="pricing-style-one">
+                                                <i class="fab fa-react"></i>
+                                                <h4>Static frontend design</h4>
+                                                <ul>
+                                                    <li>2 Page with React JS</li>
+                                                    <li>Design implement</li>
+                                                    <li>Responsive Design</li>
+                                                </ul>
+                                                <div class="price">
+                                                    <h2><sup>$</sup>65</h2>
+                                                </div>
+                                                <a class="btn mt-25 btn-sm circle btn-border light" href="#contact">Order Now</a>
+                                            </div>
+                                        </div> -->
+                                        <!-- End Single Item -->
+                                    <!-- </div>
+                                </div> -->
+                                <!-- End Tab Single Item -->
+                            <!-- </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- End Pricing -->
+
+        <!-- Start About
+        ============================================= -->
+        <div id="about" class="about-style-one-area default-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="about-style-two-thumb text-center">
+                            <img src="assets/img/800x800.png" alt="Image Not Found">
+                            <div class="info">
+                                <h3>Jaya Simha Goud Dindu</h3>
+                                <a href ="mailto:jayasimhagoudd@gmail.com">jayasimhagoudd@gmail.com</a>
+                                <p>
+                                    55 Main Street,  Kentucky, USA
+                                </p>
+                                <ul class="achivement">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fab fa-wordpress"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>  Backend Full-Stack Developer<br>
+                                                Golang & Java</h5>
+                                            <p>Top Rated – Upwork</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>Backend Engineering</h5>
+                                            <p>Microservices & Distributed Systems</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-cloud"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>Cloud & DevOps Engineering</h5>
+                                            <p>AWS, Kubernetes, CI/CD automation</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 mt-50">
+                        <div class="about-style-one-info">
+                            <h3 class="sub-title">About Me</h3>
+                            <h2 class="title">I build scalable backend platforms
+                            </h2>
+                            <p>
+                                Backend-focused Full-Stack Engineer with strong experience in
+                                Golang and Java. I specialize in building cloud-native
+                                microservices, event-driven architectures, and scalable APIs.
+                                I have hands-on experience with real-time data pipelines and
+                                production-grade AWS infrastructure, with a strong focus on
+                                performance, reliability, security, and CI/CD automation.
+                            </p>
+                            <!-- Single Item -->
+                            <div class="about-item">
+                                <h3><i class="fas fa-user"></i> Biography</h3>
+                                <ul class="biography-table">
+                                    <li>
+                                        <h5>Name</h5>
+                                        <p>
+                                            Jaya Simha Goud Dindu
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5>Role</h5>
+                                        <p>
+                                            Golang & Java Backend Full-Stack Developer
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5>Email</h5>
+                                        <p>
+                                            jayasimhagoudd@gmail.com
+                                        </p>
+                                        
+                                    </li>
+                                    <li>
+                                        <h5>LinkedIn</h5>
+                                        <p>
+                                            <a href="https://linkedin.com/in/jaya-simha-goud-dindu-264416221" target="_blank" style="color:white;">
+                                                View Profile
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Item -->
+
+                            <!-- Single Item -->
+                          <!-- Start Skills -->
+<div id="skills" class="default-padding bg-dark about-item">
+    <div class="container">
+
+        <div class="heading-left mb-60">
+            <h4 class="sub-title">Skills</h4>
+            <h2 class="title">Technical Stack</h2>
+        </div>
+
+        <div class="row">
+
+            <!-- Languages -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Languages</h4>
+                    <p>Golang, Java (11/17), SQL, TypeScript, JavaScript</p>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Backend & Architecture</h4>
+                    <p>Spring Boot, Microservices, REST, gRPC, Kafka, Spark, Node.js</p>
+                </div>
+            </div>
+
+            <!-- Cloud -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Cloud & Infrastructure</h4>
+                    <p>AWS Lambda, API Gateway, Kubernetes, Terraform</p>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Databases</h4>
+                    <p>PostgreSQL, MongoDB, Oracle, MySQL, ClickHouse, Redis</p>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Frontend</h4>
+                    <p>HTML, CSS, Bootstrap, React (TypeScript), Angular, Vue, Svelte</p>
+                </div>
+            </div>
+
+            <!-- Monitoring & Security -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Monitoring & Security</h4>
+                    <p>Prometheus, Grafana, AWS CloudWatch, OAuth2, JWT, Spring Security</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Skills -->
+
+                            <!-- End Single Item -->
+
+                            <!-- Single Item -->
+                            <div class="about-item">
+                                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                                <ul class="education-table">
+                                    <li>
+                                        <h4>AS - Science &amp; Information</h4>
+                                        <h5>SuperKing College</h5>
+                                        <span>2001 - 2005</span>
+                                        <p>
+                                            The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture. 
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h4>Sr. Software Engineer</h4>
+                                        <h5>Google Out Tech</h5>
+                                        <span>2017 - Present</span>
+                                        <p>
+                                            The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture. 
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Item -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About -->
+
+        <!-- Start Project
+        ============================================= -->
+
+        <!-- End Project -->
+
+
+
+
+
+
+       <!-- Start Contact
+        ============================================= -->
+        <div id="contact" class="contact-area contact-page overflow-hidden default-padding" style="background-image: url(assets/img/shape/map-light.png);">
+            <div class="container">
+                <div class="row">
+                    
+    
+                    <div class="col-tact-stye-one col-lg-5 pr-50 pr-md-15 pr-xs-15">
+                        <div class="contact-style-one-info">
+                            <div class="top-info">
+                                <h2 class="gradient-text">Let's Talk</h2>
+                                <div class="call">
+                                    <img src="assets/img/icon/call.png" alt="Image not Found">
+                                    <a class="phone-link" href="tel:+1251610-5659">+1 (251) 610-5659</a>
+                                </div>
+                            </div>
+                            <ul class="contact-address">
+                                <li>
+                                    <div class="info">
+                                        <h4>Location</h4>
+                                        <p>
+                                            55 Main Street, The Grand Avenue <br> 2nd Block, New York City
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info">
+                                        <h4>Official Email</h4>
+                                        <a href="mailto:jayasimhagoudd@gmail.com">jayasimhagoudd@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="copyright">
+                                &copy; 2026 Rajshekhar. All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-tact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50 mt-xs-50">
+                        <div class="contact-form-style-one">
+                            <form action="assets/mail/contact.php" method="POST" class="contact-form contact-form mt-30">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group comments">
+                                            <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="submit" name="submit" id="submit">
+                                            <i class="fa fa-paper-plane"></i> Get in Touch
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Alert Message -->
+                                <div class="col-lg-12 alert-notification">
+                                    <div id="message" class="alert-msg"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- End Signle Item -->
+    </div>
+
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.appear.js"></script>
+    <script src="assets/js/jquery.easing.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/progress-bar.min.js"></script>
+    <script src="assets/js/circle-progress.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/js/count-to.js"></script>
+    <script src="assets/js/jquery.scrolla.min.js"></script>
+    <script src="assets/js/ScrollOnReveal.js"></script>
+    <script src="assets/js/YTPlayer.min.js"></script>
+    <script src="assets/js/validnavs.js"></script>
+    <script src="assets/js/gsap.js"></script>
+    <script src="assets/js/typed.js"></script>
+    <script src="assets/js/TweenMax.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+</html>
