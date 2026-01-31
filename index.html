@@ -30,10 +30,305 @@
     <!--[if lte IE 9]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
     <![endif]-->
+<style>
+/* tech skill */
+
+/* SECTION */
+.tech-stack-section {
+    background: radial-gradient(circle at right, #0f2b3a, #0b0f12);
+    color: #fff;
+}
+
+/* TITLE */
+.stack-eyebrow {
+    color: #2cff9e;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.stack-heading {
+    font-size: 48px;
+    margin: 12px 0 50px;
+}
+
+/* GRID FIX */
+.stack-layout {
+    margin-top: 10px;
+}
+
+/* CARD */
+.stack-box {
+    position: relative;
+    height: 100%;
+    padding: 30px 28px;
+    border-radius: 18px;
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.08),
+        rgba(255,255,255,0.02)
+    );
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+/* GLOW */
+.stack-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top left,
+        rgba(44,255,158,0.28),
+        transparent 60%
+    );
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.stack-box:hover::before {
+    opacity: 1;
+}
+
+.stack-box:hover {
+    transform: translateY(-10px);
+    border-color: rgba(44,255,158,0.4);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.55);
+}
+
+/* TEXT */
+.stack-box h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.stack-box p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+}
+
+.stack-box strong {
+    color: #2cff9e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .stack-heading {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 575px) {
+    .stack-heading {
+        font-size: 34px;
+    }
+}
+
+
+/*  */
+
+
+/* about me */
+.skills-area {
+    padding: 120px 0;
+    background: radial-gradient(circle at top right, #1b2a2f, #0b0f12);
+    color: #fff;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* PROFILE CARD */
+.profile-card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.profile-card .avatar img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.profile-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.profile-card .email {
+    display: block;
+    margin-top: 8px;
+    color: #2cff9e;
+    font-size: 14px;
+}
+
+.profile-card .location {
+    margin-top: 6px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.role-badge {
+    margin-top: 30px;
+    background: rgba(0,0,0,0.4);
+    padding: 14px;
+    border-radius: 14px;
+}
+
+.role-badge span {
+    display: block;
+    font-weight: 600;
+}
+
+.role-badge small {
+    opacity: 0.7;
+}
+
+/* RIGHT SIDE */
+.skills-content .section-tag {
+    color: #2cff9e;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 13px;
+}
+
+.section-title {
+    font-size: 48px;
+    margin: 12px 0 40px;
+}
+
+/* SKILL CARDS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.skill-card {
+    background: #ffffff;
+    color: #222;
+    padding: 26px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.6;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+    .skills-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 575px) {
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 36px;
+    }
+}
+
+
+/* tool platform */
+
+.tools-matrix-section {
+    background: radial-gradient(circle at left, #0d2634, #0b0f12);
+    color: #fff;
+}
+
+/* PANEL */
+.tool-panel {
+    position: relative;
+    height: 100%;
+    padding: 28px 30px;
+    border-radius: 16px;
+    background: linear-gradient(
+        160deg,
+        rgba(255,255,255,0.07),
+        rgba(255,255,255,0.015)
+    );
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s ease;
+}
+
+/* LEFT NEON BAR */
+.tool-panel::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 3px;
+    background: linear-gradient(
+        to bottom,
+        #2cff9e,
+        transparent
+    );
+    opacity: 0.6;
+}
+
+/* HOVER */
+.tool-panel:hover {
+    transform: translateY(-8px);
+    border-color: rgba(44,255,158,0.4);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+}
+
+/* TEXT */
+.tool-panel h4 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.tool-panel p {
+    font-size: 14.8px;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.85);
+}
+
+/* RESPONSIVE */
+@media (max-width: 767px) {
+    .tool-panel {
+        padding: 24px;
+    }
+}
+
+
+
+</style>
 
 </head>
 
-<body class="bg-dark home-vcard bg-fixed" style="background-image: url(assets/img/shape/banner-1.png);">
+<body class="bg-dark bg-fixed onepage-version" style="background-image: url(assets/img/shape/banner-1.png);">
 
     <!-- Start Preloader 
     ============================================= -->
@@ -62,6 +357,7 @@
     </div>
     <!-- End Preloader -->
 
+    
     <!-- Header 
     ============================================= -->
     <header>
@@ -95,10 +391,10 @@
                             <a class="smooth-menu" href="#home">Home</a>
                         </li>
                         <li>
-                            <a class="smooth-menu" href="#about">About</a>
+                            <a class="smooth-menu" href="#services">Services</a>
                         </li>
                         <li>
-                            <a class="smooth-menu" href="#services">Services</a>
+                            <a class="smooth-menu" href="#about">About</a>
                         </li>
                         <li>
                             <a class="smooth-menu" href="#portfolio">Portfolio</a>
@@ -122,8 +418,7 @@
     </header>
     <!-- End Header -->
 
-
-    <div class="main-wrapper"  data-enter="fadeInLeft" data-exit>
+    <div class="main-wrapper">
         <!-- Start Side Navbar 
         ============================================= -->
         <div class="side-navbar-items">
@@ -203,1106 +498,750 @@
         </div>
         <!-- End Side Navbar -->
 
-        <!-- Start Main Area
+        <!-- Start Banner
         ============================================= -->
-        <div class="main-content-area">
+<!-- Start Banner -->
+<div id="home" class="banner-style-two-area default-padding"
+     style="background-image: url(assets/img/shape/8.png);">
 
-        
+    <div class="personal-social">
+        <ul>
+            <li class="linkedin">
+                <a href="https://linkedin.com/in/jaya-simha-goud-dindu-264416221" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </li>
+            <li class="github">
+                <a href="https://github.com/" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="email">
+                <a href="mailto:jayasimhagoudd@gmail.com">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-            <!-- Signle Item -->
-            <div class="section-item animated" id="home">
-                <div class="banner-style-one-area default-padding">
+    <div class="author-thumb"
+         style="background-image: url(assets/img/illustration/sudhe.png);">
+    </div>
 
+    <div class="container">
+        <div class="banner-top">
+            <div class="row">
+                <div class="col-lg-7 pr-50">
+                    <div class="information">
+                        <div class="content">
 
-                    <div class="container">
-                        <div class="banner-top">
-                            <div class="row align-center">
-                                <div class="col-lg-7 pr-50 pr-md-15 pr-xs-15">
-                                    <div class="information">
-                                        <div class="content">
-                                            <h2>Hey <img src="assets/img/shape/harnd.png" alt="image not found"> , I'm <br>Richard Brian</h2>
-                                            <p>
-                                                I'm creative designer based in USA, and I'm <br> very passionate and dedicated to my work. Say Hello 
-                                            </p>
-                                            <a href="#contact" class="btn-standard mt-10 smooth-menu">Hire me Now</a>
-                                        </div>
-                                        <div class="profile-grid">
-                                            <ul>
-                                                <li>
-                                                    <a class="smooth-menu" href="#services">
-                                                        Services
-                                                        <div class="icon-list">
-                                                            <img src="assets/img/icon/figma.png" alt="Image not Found">
-                                                            <img src="assets/img/icon/wordpress.png" alt="Image not Found">
-                                                        </div>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="smooth-menu" href="#portfolio">
-                                                        Projects
-                                                        <img src="assets/img/shape/laptop.png" alt="Image Not Found">
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a class="smooth-menu" href="#about">
-                                                        About
-                                                        <strong>A</strong>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5">
-                                    <div class="thumb">
-                                        <img src="assets/img/illustration/1.png" alt="Image Not Found">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Signle Item -->
+                          <h2 style="font-size:48px;">
+    Hi <img src="assets/img/shape/harnd.png" alt="">, I'm <br>
+    Sudheekshitha Malepati
+</h2>
 
-            <!-- Signle Item -->
-            <div class="section-item" id="about">
-                <div class="about-style-one-area default-padding">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-5">
-                                <div class="about-style-one-thumb">
-                                    <img src="assets/img/illustration/2.jpg" alt="Image Not found">
-                                    <div class="curve-text">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150" version="1.1">
-                                            <path id="textPath" d="M 0,75 a 75,75 0 1,1 0,1 z"></path>
-                                            <text><textPath href="#textPath">Years of experience</textPath></text>
-                                        </svg>
-                                        <h4>18</h4>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 offset-lg-1 mt-50">
-                                <div class="about-style-one-info">
-                                    <h3 class="sub-title">About Me</h3>
-                                    <h2 class="title">I can develop <br> that help people</h2>
-                                    <p>
-                                        I'm creative designer based in USA, and I'm very passionate and dedicated to my work. Since all Weblium templates are developed on the basis of a deep study of the niche and harmoniously combine the most current trends in web design, sometimes it’s enough to simply choose a template, add your own unique content and get a beautiful website with the perfect navigation for your type of busin.
-                                    </p>
-                                    <!-- Single Item -->
-                                    <div class="about-item">
-                                        <h3><i class="fas fa-user"></i> Biography</h3>
-                                        <ul class="biography-table">
-                                            <li>
-                                                <h5>Name</h5>
-                                                <p>
-                                                    Md Sohag Miah
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h5>Birthday</h5>
-                                                <p>
-                                                    24 March, 1994
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h5>Email</h5>
-                                                <p>
-                                                    richard@hello.com
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h5>Skype</h5>
-                                                <p>
-                                                    program540
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Single Item -->
+                          <h3 class="title">
+    <span class="cd-headline clip is-full-width">
+        <span class="cd-words-wrapper">
+            <b class="is-visible">Senior Data Analyst</b>
+            <b class="is-hidden">Healthcare & Analytics Specialist</b>
+            <b class="is-hidden">Snowflake · dbt · Cloud Data Engineer</b>
+        </span>
+    </span>
+</h3>
 
-                                    <!-- Single Item -->
-                                    <div class="about-item">
-                                        <h3><i class="fas fa-rocket"></i> Personal Skill</h3>
-                                        <ul class="skill-items mt-10">
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="fab fa-laravel"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <span>75%</span>
-                                                    <h5>Object oriented programming</h5>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="fab fa-react"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <span>90%</span>
-                                                    <h5>Front-End with React</h5>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="icon">
-                                                    <i class="fab fa-html5"></i>
-                                                </div>
-                                                <div class="content">
-                                                    <span>89%</span>
-                                                    <h5>Advance frontend development</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Single Item -->
+                          <p class="mt-20">
+    Data Analyst with 7+ years of experience designing healthcare and
+    financial analytics platforms using Snowflake, dbt, Spark, and cloud-native
+    pipelines to deliver compliant, scalable insights.
+</p>
 
-                                    <!-- Single Item -->
-                                    <div class="about-item">
-                                        <h3><i class="fas fa-graduation-cap"></i> Education</h3>
-                                        <ul class="education-table">
-                                            <li>
-                                                <h4>AS - Science &amp; Information</h4>
-                                                <h5>SuperKing College</h5>
-                                                <span>2001 - 2005</span>
-                                                <p>
-                                                    The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture. 
-                                                </p>
-                                            </li>
-                                            <li>
-                                                <h4>Sr. Software Engineer</h4>
-                                                <h5>Google Out Tech</h5>
-                                                <span>2017 - Present</span>
-                                                <p>
-                                                    The training provided by universities in order to prepare people to work in various sectors of the economy or areas of culture. 
-                                                </p>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <!-- End Single Item -->
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Signle Item -->
-
-            <!-- Signle Item -->
-            <div class="section-item" id="services">
-                <div class="services-style-one-area pt-120 pt-xs-50 pb-70 pb-xs-0">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-lg-2">
-                                <div class="site-heading text-center">
-                                    <h4 class="sub-title">What i do</h4>
-                                    <h2 class="title">My Specializations</h2>
-                                    <div class="devider"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-                            <!-- Single Item -->
-                            <div class="service-style-one col-lg-6 col-md-6">
-                                <div class="service-style-one-item">
-                                    <div class="thumb">
-                                        <img src="assets/img/icon/web-design.png" alt="Icon">
-                                    </div>
-                                    <div class="info">
-                                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Website design</a></h4>
-                                        <p>
-                                            Continue indulged speaking the was horrible for domestic position. Seeing get rather her you not esteem men settle is genius take excuse. Deal say over you age comparison new ham melancholy.
-                                        </p>
-                                        <div class="bottom">
-                                            <span>28 Projects</span>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="service-style-one col-lg-6 col-md-6">
-                                <div class="service-style-one-item">
-                                    <div class="thumb">
-                                        <img src="assets/img/icon/app-development.png" alt="Icon">
-                                    </div>
-                                    <div class="info">
-                                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">App Development</a></h4>
-                                        <p>
-                                            Continue indulged speaking the was horrible for domestic position. Seeing get rather her you not esteem men settle is genius take excuse. Deal say over you age comparison new ham melancholy.
-                                        </p>
-                                        <div class="bottom">
-                                            <span>1K Projects</span>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="service-style-one col-lg-6 col-md-6">
-                                <div class="service-style-one-item">
-                                    <div class="thumb">
-                                        <img src="assets/img/icon/camera.png" alt="Icon">
-                                    </div>
-                                    <div class="info">
-                                        <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">UX/UI Design</a></h4>
-                                        <p>
-                                            Continue indulged speaking the was horrible for domestic position. Seeing get rather her you not esteem men settle is genius take excuse. Deal say over you age comparison new ham melancholy.
-                                        </p>
-                                        <div class="bottom">
-                                            <span>74 Projects</span>
-                                            <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="service-style-one col-lg-6 col-md-6">
-                                <div class="service-style-one-item button">
-                                    <a class="hire-btn" href="#">hire me</a>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
-                    </div>
-                </div>
-                <!-- End Service -->
-
-                <!-- Start Pricing -->
-                <div class="pricing-style-one-area default-padding-bottom">
-                    <div class="container">
-                        <div class="row align-center">
-                            <div class="col-lg-12 col-xl-4">
-                                <div class="pricing-left">
-                                    <h4 class="sub-title">Pricing</h4>
-                                    <h2 class="title">The best pricing plans</h2>
-                                    <ul class="list-rating mt-50">
-                                        <li>
-                                            Seller communication level
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i> 4.9
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Recommend to a friend
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i> 5
-                                            </div>
-                                        </li>
-                                        <li>
-                                            Deliver on time
-                                            <div class="rating">
-                                                <i class="fas fa-star"></i> 5
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-xl-7 offset-xl-1">
-                                <div class="pricing-style-one-items">
-
-                                    <div class="nav nav-tabs pricing-tab-navs" id="nav-tab" role="tablist">
-                                        <button class="nav-link active" id="nav-id-1" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
-                                            <span>Monthly</span>
-                                        </button>
-                                        <button class="nav-link" id="nav-id-2" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
-                                            <span>Yearly</span>
-                                        </button>
-                                    </div>
-
-                                    <div class="tab-content pricing-tab-content" id="nav-tabContent">
-
-                                        <!-- Tab Single Item -->
-                                        <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="nav-id-1">
-                                            <div class="row">
-                                                <!-- Single Item -->
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="pricing-style-one">
-                                                        <i class="fab fa-wordpress"></i>
-                                                        <h4>WordPress Development</h4>
-                                                        <ul>
-                                                            <li>1 Page with Elementor</li>
-                                                            <li>Design Customization</li>
-                                                            <li>Responsive Design</li>
-                                                        </ul>
-                                                        <div class="price">
-                                                            <h2><sup>$</sup>48</h2>
-                                                        </div>
-                                                        <a class="btn mt-25 btn-sm circle btn-border light" href="#contact">Order Now</a>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                                <!-- Single Item -->
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="pricing-style-one active">
-                                                        <i class="fab fa-react"></i>
-                                                        <h4>Static frontend design</h4>
-                                                        <ul>
-                                                            <li>2 Page with React JS</li>
-                                                            <li>Design implement</li>
-                                                            <li>Responsive Design</li>
-                                                        </ul>
-                                                        <div class="price">
-                                                            <h2><sup>$</sup>24</h2>
-                                                        </div>
-                                                        <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                        </div>
-                                        <!-- End Tab Single Item -->
-                    
-                                        <!-- Tab Single Item -->
-                                        <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="nav-id-2">
-                                            <div class="row">
-                                                <!-- Single Item -->
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="pricing-style-one active">
-                                                        <i class="fab fa-wordpress"></i>
-                                                        <h4>WordPress Development</h4>
-                                                        <ul>
-                                                            <li>1 Page with Elementor</li>
-                                                            <li>Design Customization</li>
-                                                            <li>Responsive Design</li>
-                                                        </ul>
-                                                        <div class="price">
-                                                            <h2><sup>$</sup>157</h2>
-                                                        </div>
-                                                        <a class="btn mt-25 btn-sm circle btn-dark" href="#contact">Order Now</a>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                                <!-- Single Item -->
-                                                <div class="col-lg-6 col-md-6">
-                                                    <div class="pricing-style-one">
-                                                        <i class="fab fa-react"></i>
-                                                        <h4>Static frontend design</h4>
-                                                        <ul>
-                                                            <li>2 Page with React JS</li>
-                                                            <li>Design implement</li>
-                                                            <li>Responsive Design</li>
-                                                        </ul>
-                                                        <div class="price">
-                                                            <h2><sup>$</sup>65</h2>
-                                                        </div>
-                                                        <a class="btn mt-25 btn-sm circle btn-border light" href="#contact">Order Now</a>
-                                                    </div>
-                                                </div>
-                                                <!-- End Single Item -->
-                                            </div>
-                                        </div>
-                                        <!-- End Tab Single Item -->
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Pricing -->
-
-
-            </div>
-            <!-- End Signle Item -->
-
-            <!-- Signle Item -->
-            <div class="section-item" id="portfolio">
-                <div class="project-style-one-area default-padding">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8">
-                                <div class="heading-left">
-                                    <h4 class="sub-title">Recent Work</h4>
-                                    <h2 class="title">Showcasing My Projects</h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row mt--50">
-                            <!-- Single Item -->
-                            <div class="col-lg-6 item-center">
-                                <div class="portfolio-style-one">
-                                    <div class="thumb-zoom">
-                                        <img src="assets/img/800x800.png" alt="Image Not Found">
-                                    </div>
-                                    <div class="pf-item-info">
-                                        <div class="content-info">
-                                            <span>Marketing</span>
-                                            <h2><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Photo shooting and editing</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-6 item-center">
-                                <div class="portfolio-style-one">
-                                    <div class="thumb-zoom">
-                                        <img src="assets/img/800x800.png" alt="Image Not Found">
-                                    </div>
-                                    <div class="pf-item-info">
-                                        <div class="content-info">
-                                            <span>Creative</span>
-                                            <h2><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Quality in industrial design</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-6 item-center">
-                                <div class="portfolio-style-one">
-                                    <div class="thumb-zoom">
-                                        <img src="assets/img/800x800.png" alt="Image Not Found">
-                                    </div>
-                                    <div class="pf-item-info">
-                                        <div class="content-info">
-                                            <span>Design</span>
-                                            <h2><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Blue business mockup cards</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                            <!-- Single Item -->
-                            <div class="col-lg-6 item-center">
-                                <div class="portfolio-style-one">
-                                    <div class="thumb-zoom">
-                                        <img src="assets/img/800x800.png" alt="Image Not Found">
-                                    </div>
-                                    <div class="pf-item-info">
-                                        <div class="content-info">
-                                            <span>Business</span>
-                                            <h2><a href="#" data-bs-toggle="modal" data-bs-target="#projectSingleModal">Simple black & white design	</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single Item -->
-                        </div>
-                    </div>
-
-                    
-
-
-                </div>
-                <!-- End Project -->
-
-                <!-- Testimonil Start -->
-                <div class="testimonial-style-one-area default-padding-bottom">
-                    <div class="container">
-                        <div class="testimonial-style-one-box">
-
-                            <div class="row">
-                                <div class="col-lg-8 offset-lg-2">
-                                    <div class="site-heading text-center">
-                                        <h4 class="sub-title">Testimonials</h4>
-                                        <h2 class="title">Customers feedback</h2>
-                                        <div class="devider"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-lg-10 offset-lg-1">
-                                    <div class="testimonial-carousel text-center swiper">
-                                        <!-- Additional required wrapper -->
-                                        <div class="swiper-wrapper">
-                                            <!-- Single item -->
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-style-one">
-                                                    
-                                                    <div class="item">
-                                                        <div class="thumb">
-                                                            <img src="assets/img/800x800.png" alt="Image Not Found">
-                                                        </div>
-                                                        <div class="content">
-                                                            <p>
-                                                                “Targetingconsultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now always remembering to the point.”
-                                                            </p>
-                                                        </div>
-                                                        <div class="provider">
-                                                            <div class="rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <div class="info">
-                                                                <h4>Matthew J. Wyman</h4>
-                                                                <span>Senior Consultant</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Single item -->
-                                            <!-- Single item -->
-                                            <div class="swiper-slide">
-                                                <div class="testimonial-style-one">
-                                                    <div class="item">
-                                                        <div class="thumb">
-                                                            <img src="assets/img/800x800.png" alt="Image Not Found">
-                                                        </div>
-                                                        <div class="content">
-                                                            <p>
-                                                                “Consultation discover apartments. ndulgence off under folly death wrote cause her way spite. Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing. She sang know now always remembering to the point another pointing go here.”
-                                                            </p>
-                                                        </div>
-                                                        <div class="provider">
-                                                            <div class="rating">
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                                <i class="fas fa-star"></i>
-                                                            </div>
-                                                            <div class="info">
-                                                                <h4>Anthom Bu Spar</h4>
-                                                                <span>Marketing Manager</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- End Single item -->
-                                        </div>
-                
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- Testimonil End -->
-
-                <!-- Brand Start -->
-                <div class="brand-style-one-area default-padding-bottom text-center">
-                    <div class="container">
-
-                        <div class="brand-heading">
-                            <div class="row">
-                                <h3>Thrusted By <strong>10K+ </strong> Customers</h3>
-                            </div>
-                        </div>
-
-                        <div class="brand-style-one">
-                            <div class="row">
-                                <div class="col-lg-10 offset-lg-1">
-                                    <div class="brand5col swiper">
-                                        <!-- Additional required wrapper -->
-                                        <div class="swiper-wrapper align-center">
-                                            <!-- Single Item -->
-                                            <div class="swiper-slide">
-                                                <img src="assets/img/brand/1.png" alt="Thumb">
-                                            </div>
-                                            <!-- End Single Item -->
-                                            <!-- Single Item -->
-                                            <div class="swiper-slide">
-                                                <img src="assets/img/brand/2.png" alt="Thumb">
-                                            </div>
-                                            <!-- End Single Item -->
-                                            <!-- Single Item -->
-                                            <div class="swiper-slide">
-                                                <img src="assets/img/brand/4.png" alt="Thumb">
-                                            </div>
-                                            <!-- End Single Item -->
-                                            <!-- Single Item -->
-                                            <div class="swiper-slide">
-                                                <img src="assets/img/brand/5.png" alt="Thumb">
-                                            </div>
-                                            <!-- End Single Item -->
-                                            <!-- Single Item -->
-                                            <div class="swiper-slide">
-                                                <img src="assets/img/brand/3.png" alt="Thumb">
-                                            </div>
-                                            <!-- End Single Item -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Brand -->
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Brand End -->
-
-            </div>
-            <!-- End Signle Item -->
-
-            <!-- Signle Item -->
-            <div class="section-item" id="blog">
-                <div class="home-blog default-padding bottom-less">
-
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 offset-lg-2">
-                                <div class="site-heading text-center">
-                                    <h4 class="sub-title">News & Article</h4>
-                                    <h2 class="title">Latest from blog</h2>
-                                    <div class="devider"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row">
-            
-                            <!-- Single item -->
-                            <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <a href="blog-single-with-sidebar.html"><img src="assets/img/800x600.png" alt="Thumb"></a>
-                                        <div class="inner-date">
-                                            <strong>24</strong> March, 2023
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <h4>
-                                            <a href="#">Miscovery incommode earnestly commanded if.</a>
-                                        </h4>
-                                        <div class="meta">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Md Sohag</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">16 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single item -->
-            
-                            <!-- Single item -->
-                            <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <a href="blog-single-with-sidebar.html"><img src="assets/img/800x600.png" alt="Thumb"></a>
-                                        <div class="inner-date">
-                                            <strong>17</strong> April, 2023
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <h4>
-                                            <a href="#">Expression acceptance imprudence particular</a>
-                                        </h4>
-                                        <div class="meta">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Md Sohag</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">29 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single item -->
-            
-                            <!-- Single item -->
-                            <div class="blog-style-one mb-30 col-xl-4 col-md-6">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <a href="blog-single-with-sidebar.html"><img src="assets/img/800x600.png" alt="Thumb"></a>
-                                        <div class="inner-date">
-                                            <strong>08</strong> July, 2023
-                                        </div>
-                                    </div>
-                                    <div class="info">
-                                        <h4>
-                                            <a href="#">Bethering occurs concerns removing desirous.</a>
-                                        </h4>
-                                        <div class="meta">
-                                            <ul>
-                                                <li>
-                                                    <a href="#">Md Sohag</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">46 Comments</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- End Single item -->
-            
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
-            <!-- End Signle Item -->
-
-            <!-- Signle Item -->
-            <div class="section-item" id="contact">
-                <div class="contact-area contact-page overflow-hidden default-padding" style="background-image: url(assets/img/shape/map-light.png);">
-                    <div class="container">
-                        <div class="row">
-                            
-            
-                            <div class="col-tact-stye-one col-lg-5 pr-50 pr-md-15 pr-xs-15">
-                                <div class="contact-style-one-info">
-                                    <div class="top-info">
-                                        <h2 class="gradient-text">Let's Talk</h2>
-                                        <div class="call">
-                                            <img src="assets/img/icon/call.png" alt="Image not Found">
-                                            <a class="phone-link" href="tel:+4733378901">+4733378901</a>
-                                        </div>
-                                    </div>
-                                    <ul class="contact-address">
-                                        <li>
-                                            <div class="info">
-                                                <h4>Location</h4>
-                                                <p>
-                                                    55 Main Street, The Grand Avenue <br> 2nd Block, New York City
-                                                </p>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="info">
-                                                <h4>Official Email</h4>
-                                                <a href="mailto:info@digital.com.com">info@digital.com</a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <p class="copyright">
-                                        &copy; 2023 Ventix. All Rights Reserved
-                                    </p>
-                                </div>
-                            </div>
-            
-                            <div class="col-tact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50 mt-xs-50">
-                                <div class="contact-form-style-one">
-                                    <form action="assets/mail/contact.php" method="POST" class="contact-form contact-form mt-30">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group">
-                                                    <input class="form-control" id="name" name="name" placeholder="Name" type="text">
-                                                    <span class="alert-error"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
-                                                    <span class="alert-error"></span>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="form-group">
-                                                    <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
-                                                    <span class="alert-error"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="form-group comments">
-                                                    <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <button type="submit" name="submit" id="submit">
-                                                    <i class="fa fa-paper-plane"></i> Get in Touch
-                                                </button>
-                                            </div>
-                                        </div>
-                                        <!-- Alert Message -->
-                                        <div class="col-lg-12 alert-notification">
-                                            <div id="message" class="alert-msg"></div>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- End Signle Item -->
-
-            <!-- All Modal Single 
-            ============================================= -->
-
-            <!-- Start Services Single Modal -->
-            <div class="modal fade" id="serviceSingleModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                    <div class="modal-content">
-                        
-                        <div class="modal-body">
-
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-
-                            <div class="services-details-area">
-                                <div class="container">
-                                    <div class="services-details-items">
-                                        <div class="row">
-                                            
-                                            <div class="col-xl-12 services-single-content">
-                                                <div class="service-single-thumb">
-                                                    <img src="assets/img/1500x800.png" alt="Thumb">
-                                                </div>
-                                                <h2>Best influencer marketing services</h2>
-                                                <p>
-                                                    We denounce with righteous indige nation and dislike men who are so beguiled and demo realized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue cannot foresee. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled data structures manages data in technology.
-                                                </p>
-                                                <div class="features mt-40 mt-xs-30 mb-30 mb-xs-20">
-                                                    <div class="row">
-                                                        <div class="col-lg-5 col-md-6">
-                                                            <div class="content">
-                                                                <h3>Included Services</h3>
-                                                                <ul class="feature-list-item">
-                                                                    <li>Monthly SEO Task</li>
-                                                                    <li>24/7 Alltime Supporting</li>
-                                                                    <li>Turbo Boosting</li>
-                                                                    <li>Expert Team Members</li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7 col-md-6 mt-xs-30">
-                                                            <div class="content">
-                                                                <h3>The Challange</h3>
-                                                                <p>
-                                                                    Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <h3>What we do?</h3>
-                                                <p>
-                                                    Nam libero tempore, cum soluta nobis est elig endi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repelle ndus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias. consequatur aut perferendis doloribus asperiores repellat. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.  pleasures have to be repudiated and annoyances accepted. 
-                                                </p>
-                        
-                        
-                                                <div class="faq-style-one mt-40">
-                                                    <h2 class="mb-20">Any Questions find here.</h2>
-                                                    <div class="accordion" id="faqAccordion">
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header" id="headingOne">
-                                                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                    Business Innovation
-                                                                </button>
-                                                            </h2>
-                                                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
-                                                                <div class="accordion-body">
-                                                                    <p>
-                                                                        Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. pleasures have to be repudiated and annoyances accepted. Nam libero tempore, cum soluta nobis est elig endi optio cumque 
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header" id="headingTwo">
-                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                                    Search Engine Optimization
-                                                                </button>
-                                                            </h2>
-                                                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
-                                                                <div class="accordion-body">
-                                                                    <p>
-                                                                        Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. pleasures have to be repudiated and annoyances accepted. Nam libero tempore, cum soluta nobis est elig endi optio cumque 
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="accordion-item">
-                                                            <h2 class="accordion-header" id="headingThree">
-                                                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                                    Thinking Differently
-                                                                </button>
-                                                            </h2>
-                                                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
-                                                                <div class="accordion-body">
-                                                                    <p>
-                                                                        Bennings appetite disposed me an at subjects an. To no indulgence diminution so discovered mr apartments. Are off under folly death wrote cause her way spite. Plan upon yet way. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. pleasures have to be repudiated and annoyances accepted. Nam libero tempore, cum soluta nobis est elig endi optio cumque 
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                        
-                                                <div class="services-more mt-40">
-                                                    <h2 class="mb-20">Most popular services</h2>
-                                                    <div class="row">
-                                                        <div class="col-md-6">
-                                                            <div class="item">
-                                                                <img src="assets/img/icon/1.png" alt="Image Not Found">
-                                                                <h4><a href="#">Friendly Interface</a></h4>
-                                                                <p>
-                                                                    These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-md-6">
-                                                            <div class="item">
-                                                                <img src="assets/img/icon/2.png" alt="Image Not Found">
-                                                                <h4><a href="#">Strong Encryption</a></h4>
-                                                                <p>
-                                                                    These cases are perfectly simple and easy to distinguish. In a free hour, when our power.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                        
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="mt-30">
+                                <a href="#contact" class="btn-standard smooth-menu">Hire Me</a>
+                                <a href="assets/resume/Jaya_Simha_Goud_Dindu.pdf"
+                                   class="btn btn-border light ml-15"
+                                   target="_blank">
+                                    Download Resume
+                                </a>
                             </div>
 
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- End Services Single Modal -->
+        </div>
+    </div>
+</div>
+<!-- End Banner -->
 
-            <!-- Start Projects Single Modal -->
-            <div class="modal fade project-details" id="projectSingleModal" tabindex="-1" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-                    <div class="modal-content">
-                        <div class="modal-body">
+        <!-- End Side Navbar -->
 
-                            <div class="modal-header">
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
+        <!-- Start Expertise
+        ============================================= -->
+<!-- Start Expertise -->
+<section id="skills" class="tech-stack-section default-padding">
+    <div class="container">
 
-                            <div class="project-details-area">
-                                <div class="container">
-                                    <div class="project-details-items">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="project-thumb">
-                                                    <img src="assets/img/1500x800.png" alt="Thumb">
-                                                </div>
-                                            </div>
-                                            <div class="col-xl-12">
-
-                                                <div class="project-details mt-60 mt-xs-30">
-                                                    <div class="top-info">
-                                                        <div class="row">
-
-                                                            <div class="col-lg-5 pl-50 pl-md-15 pl-xs-15 order-lg-last">
-                                                                <ul class="gallery-project-basic-info">
-                                                                    <li>
-                                                                        <div class="info">
-                                                                            <b>Clients:</b> validthemes
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="info">
-                                                                            <b>Project Type:</b> Website Growth
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="info">
-                                                                            <b>Date:</b> 25 August, 2023
-                                                                        </div>
-                                                                    </li>
-                                                                    <li>
-                                                                        <div class="info">
-                                                                            <b>Address:</b> New York United state
-                                                                        </div>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-
-                                                            <div class="col-lg-7">
-                                                                <h2>The best digital solutions</h2>
-                                                                <p>
-                                                                    Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoque ante aenean elementum. Vulgar as hearts by garret. Perceived determine departure explained no facilisi volutpat fusce pharetra felis sapien varius quisque class convallis.
-                                                                </p>
-                                                            </div>
-                                                            
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="row mt-40 mb-40">
-                                                        
-                                                        <div class="col-lg-5 pr-50 pr-md-15 pr-xs-15">
-                                                            <div class="check-list">
-                                                                <div class="single-list">
-                                                                    <h4>Mobile Optimization</h4>
-                                                                    <p>
-                                                                        Tempor nonummy metus lobortis. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum potenti.
-                                                                    </p>
-                                                                </div>
-                                                                <div class="single-list">
-                                                                    <h4>Marketing Automation</h4>
-                                                                    <ul class="list-disc">
-                                                                        <li>Social media marketing</li>
-                                                                        <li>Search engine optimization (seo)</li>
-                                                                        <li>Public Relations</li>
-                                                                        <li>Digital Management</li>
-                                                                    </ul>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-7">
-                                                            <div class="thumb-grid">
-                                                                <img src="assets/img/600x800.png" alt="Thumb">
-                                                                <img src="assets/img/600x800.png" alt="Thumb">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    
-                                                    
-
-                                                    <p>
-                                                        Give lady of they such they sure it. Me contained explained my education. Vulgar as hearts by garret. Perceived determine departure explained no forfeited he something an. Contrasted dissimilar get joy you instrument out reasonably. Again keeps at no meant stuff. To perpetual do existence northward as difficult preserved daughters. Continued at up to zealously necessary breakfast. Surrounded sir motionless she end literature. Gay direction neglected but supported yet her.  Facilisis inceptos nec, potenti nostra aenean lacinia varius semper ant nullam nulla primis placerat facilisis. Netus lorem rutrum arcu dignissim at sit morbi phasellus nascetur eget urna potenti cum vestibulum cras. Tempor nonummy metus lobortis. Sociis velit etiam, dapibus. Lectus vehicula pellentesque cras posuere tempor facilisi habitant lectus rutrum pede quisque hendrerit parturient posuere mauris ad elementum fringilla facilisi volutpat fusce pharetra felis sapien varius quisque class convallis praesent est sollicitudin donec nulla venenatis, cursus fermentum netus posuere sociis porta risus habitant malesuada nulla habitasse hymenaeos. Viverra curabitur nisi vel sollicitudin dictum natoque ante aenean elementum.
-                                                    </p>
-                                                    <div class="row mt-50 mt-xs-30">
-                                                        <div class="col-lg-6 col-md-6">
-                                                            <img src="assets/img/800x600.png" alt="Thumb">
-                                                        </div>
-                                                        <div class="col-lg-6 col-md-6 mt-xs-30">
-                                                            <img src="assets/img/800x600.png" alt="Thumb">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <span class="stack-eyebrow">SKILLS</span>
+                <h2 class="stack-heading">Technical Stack</h2>
             </div>
-            <!-- End Projects Single Modal -->
+        </div>
 
+        <div class="row stack-layout">
+
+            <div class="col-lg-4 col-md-6 mb-30">
+              <div class="stack-box">
+    <h4>Data Platforms</h4>
+    <p>Snowflake, Amazon Redshift, Databricks, Azure Synapse</p>
+</div>
+
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+               <div class="stack-box">
+    <h4>Big Data & Processing</h4>
+    <p>Apache Spark, PySpark, Hadoop, Hive, Presto, MapReduce</p>
+</div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+              <div class="stack-box">
+    <h4>Cloud & Orchestration</h4>
+    <p>AWS (Glue, EMR, S3, Lake Formation, Lambda), Azure Data Factory</p>
+</div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+              <div class="stack-box">
+    <h4>Streaming & Ingestion</h4>
+    <p>Kafka, Kafka Streams, Kafka Connect, Kinesis, Sqoop</p>
+</div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+               <div class="stack-box">
+    <h4>Analytics & Visualization</h4>
+    <p>Tableau, Power BI, Qlik Sense</p>
+</div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-30">
+               <div class="stack-box">
+    <h4>Programming</h4>
+    <p>Python, SQL, PySpark, Pandas, NumPy</p>
+</div>
+            </div>
 
         </div>
-        <!-- End Main Area -->
+    </div>
+</section>
+
+
+<!-- End Expertise -->
+
+        <!-- End  Expertsie -->
+
+        <!-- Start Services
+        ============================================= -->
+        <div class="services-style-two-area default-padding">
+            <div class="container">
+
+                <div class="service-box">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="heading-left mb-60">
+                                <h4 class="sub-title">What i do</h4>
+                                <h2 class="title">My Specializations</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="service-style-two-items">
+                                <!-- Navigation -->
+                                <div class="services-nav">
+                                    <div class="nav-items">
+                                        <div class="services-button-prev"></div>
+                                        <div class="services-button-next"></div>
+                                    </div>
+                                </div>
+                                <div class="services-style-two-carousel swiper">
+                                    <!-- Additional required wrapper -->
+                                    <div class="swiper-wrapper">
+                                        <!-- Single item -->
+                                        <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/health.jpg);">H</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                           <h2>Healthcare Data Analytics</h2>
+                                                           <p>
+    Building compliant analytics platforms for EHR/EMR, Medicaid claims,
+    lab systems, and public health reporting.
+</p>
+                                                           <ul class="service-list mt-30">
+    <li>HIPAA · HL7 · FHIR Compliance</li>
+    <li>Claims & Utilization Analytics</li>
+    <li>Clinical KPI Dashboards</li>
+</ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                        <!-- Single item -->
+                                        <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/cloud.jpg);">C</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                           <h2>Cloud Data Engineering</h2>
+                                                          <p>
+    Designing scalable cloud-native data pipelines using AWS and Azure
+    for batch and real-time analytics.
+</p>
+                                                          <ul class="service-list mt-30">
+    <li>Snowflake & Redshift</li>
+    <li>AWS Glue, EMR, Lambda</li>
+    <li>ADF & Databricks</li>
+</ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                          <!-- Single item -->
+                                          <div class="swiper-slide">
+                                            <div class="services-style-two">
+                                                <div class="row">
+                                                    <div class="col-lg-5">
+                                                        <h2 class="bg-text" style="background-image: url(assets/img/financial.jpg);">F</h2>
+                                                    </div>
+                                                    <div class="col-lg-7 pl-50 pl-md-15 pl-xs-15">
+                                                        <div class="services-two-info">
+                                                            <h2>Financial & Advisory Analytics</h2>
+                                                          <p>
+    Supporting securities, portfolio construction, and performance
+    reporting for advisory workflows.
+</p>
+                                                            <ul class="service-list mt-30">
+    <li>Holdings & Exposure Models</li>
+    <li>Performance & Benchmarking</li>
+    <li>Regulatory Reporting</li>
+</ul>
+                                                            <a href="#contact" class="btn btn-md circle btn-theme effect smooth-menu">Hire Now</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- End Single item -->
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Services -->
+
+        <!-- Start Experience -->
+       <!-- Start Services
+        ============================================= -->
+        <div id="services" class="services-style-one-area default-padding-top mb--50">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="left-heading mb-50">
+                            <h4 class="sub-title">Career</h4>
+                            <h2 class="title">Professional Experience</h2>
+                            <div class="devider"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/web-design.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">HCA Healthcare – Rahway, NJ</a></h4>
+                                <span>Senior Data Analyst</span>
+                                <p>
+                                    <ul>
+    <li>Built Snowflake and Redshift analytics models for healthcare operations.</li>
+    <li>Processed EHR/EMR, Medicaid claims, and lab data (HL7, FHIR)</li>
+    <li>Optimized Spark pipelines reducing processing latency by 35%.</li>
+    <li>Developed Tableau & Power BI dashboards for clinical KPIs.</li>
+    <li>Implemented AWS Lake Formation governance and IAM security.</li>
+</ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>28 Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/app-development.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Financial & Advisory Analytics</a></h4>
+                                <span>Data Analyst</span>
+                                <p>
+                                   <ul>
+    <li>Modeled securities, holdings, and portfolio performance in Snowflake.</li>
+    <li>Built dbt models for exposure, allocation, and compliance metrics.</li>
+    <li>Delivered Power BI dashboards for returns and benchmarks.</li>
+    <li>Supported advisory reporting and investment decision workflows.</li>
+    <li>Ensured data accuracy and consistency across financial datasets.</li>
+</ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>1K Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item">
+                            <div class="thumb">
+                                <img src="assets/img/icon/camera.png" alt="Icon">
+                            </div>
+                            <div class="info">
+                                <h4><a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal">Azure Data Engineering Engagements</a></h4>
+                                <span>Data Engineer Analyst</span>
+                                <p>
+                                <ul>
+    <li>Developed Azure Synapse & Databricks pipelines.</li>
+    <li>Built Power BI dashboards for finance and operations.</li>
+    <li>Implemented CI/CD and RBAC using Azure DevOps.</li>
+</ul>
+                                </p>
+                                <!-- <div class="bottom">
+                                    <span>74 Projects</span>
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#serviceSingleModal"><i class="fas fa-arrow-right"></i></a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="service-style-one col-lg-6 col-md-6">
+                        <div class="service-style-one-item button">
+                            <a class="hire-btn" href="#contact">hire me</a>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+
+            <!-- Start Services Single Modal -->
+       
+            <!-- End Services Single Modal -->
+            
+        </div>
+       
+<!-- End Experience -->
+
+<!-- <section id="tools" class="tools-matrix-section default-padding">
+    <div class="container">
+
+        <div class="row mb-50">
+            <div class="col-lg-12">
+                <span class="section-tag">TOOLING</span>
+                <h2 class="section-title">Tools & Platforms</h2>
+            </div>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Development Tools</h4>
+                    <p>
+                        IntelliJ IDEA, VS Code, GoLand, Eclipse, Maven, Gradle, Go Modules,
+                        Swagger / OpenAPI, Postman, Lombok, MapStruct
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Cloud & DevOps</h4>
+                    <p>
+                        AWS Console, IAM, EC2, ECS, EKS, S3, Lambda, API Gateway, SAM,
+                        Terraform, Terraform Cloud, Terragrunt, Helm, Kustomize,
+                        Jenkins Pipelines, GitHub Actions, Docker, Docker Compose
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Streaming & Data</h4>
+                    <p>
+                        Kafka CLI, Kafka Connect, Kafka Streams, Apache Spark SQL,
+                        Spark MLlib, Apache Airflow UI, Redis Insight,
+                        ClickHouse Client, pgAdmin
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Observability</h4>
+                    <p>
+                        Prometheus, Alertmanager, Grafana, Grafana Loki,
+                        AWS CloudWatch, Logs Insights, Splunk Enterprise,
+                        ELK Stack, Jaeger, OpenTelemetry
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>Security & Quality</h4>
+                    <p>
+                        Keycloak, HashiCorp Vault, AWS Secrets Manager,
+                        SonarQube, OWASP Dependency Check
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="tool-panel">
+                    <h4>UI Tooling</h4>
+                    <p>
+                        Vite, Webpack, Storybook, Chrome DevTools,
+                        Lighthouse, Angular CLI, React DevTools
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section> -->
+
+
+
+
+        <!-- Start About
+        ============================================= -->
+        <div id="about" class="about-style-one-area default-padding-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="about-style-two-thumb text-center">
+                            <img src="assets/img/persnal-data.jpg" alt="Image Not Found">
+                            <div class="info">
+                                <h3>SUDHEEKSHITHA MALEPATI</h3>
+                                <a href ="mailto:jayasimhagoudd@gmail.com">jayasimhagoudd@gmail.com</a>
+                                <p>
+                                    55 Main Street,  Kentucky, USA
+                                </p>
+                                <ul class="achivement">
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fab fa-wordpress"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>  Senior Data Analyst </h5>
+                                            <p>Healthcare & Clinical Analytics</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fab fa-html5"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>Financial  Advisory Analytics</h5>
+                                            <p>Snowflake, dbt, Power BI</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <i class="fas fa-cloud"></i>
+                                        </div>
+                                        <div class="info">
+                                            <h5>Cloud Data Engineering</h5>
+                                            <p>AWS, Azure, Spark, Databricks</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1 mt-50">
+                        <div class="about-style-one-info">
+                            <h3 class="sub-title">About Me</h3>
+                            <h2 class="title">I build scalable backend platforms
+                            </h2>
+                            <p>
+                              <p>
+                                    Data Analyst with extensive experience across healthcare,
+                                    public health, and financial services. Specialized in building
+                                    scalable data pipelines, governed data platforms, and
+                                    insight-driven dashboards using Snowflake, Spark, Python,
+                                    and modern cloud ecosystems.
+                                </p>
+
+                            </p>
+                            <!-- Single Item -->
+                            <div class="about-item">
+                                <h3><i class="fas fa-user"></i> Biography</h3>
+                                <ul class="biography-table">
+                                    <li>
+                                        <h5>Name</h5>
+                                        <p>
+                                           SUDHEEKSHITHA MALEPATI
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5>Role</h5>
+                                        <p>
+                                           DATA ANALYST
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h5>Email</h5>
+                                        <p>
+                                            jayasimhagoudd@gmail.com
+                                        </p>
+                                        
+                                    </li>
+                                    <li>
+                                        <h5>LinkedIn</h5>
+                                        <p>
+                                            <a href="https://linkedin.com/in/jaya-simha-goud-dindu-264416221" target="_blank" style="color:white;">
+                                                View Profile
+                                            </a>
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Item -->
+
+                            <!-- Single Item -->
+                          <!-- Start Skills -->
+<div id="skills" class="default-padding bg-dark about-item">
+    <div class="container">
+
+        <div class="heading-left mb-60">
+            <h4 class="sub-title">Skills</h4>
+            <h2 class="title">Technical Stack</h2>
+        </div>
+
+        <div class="row">
+
+            <!-- Languages -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Languages & Querying</h4>
+                    <p>SQL, Python, PySpark, Spark SQL, Bash</p>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Data Warehousing & Analytics</h4>
+                    <p>Snowflake, Amazon Redshift, Azure Synapse, dbt, Presto, Amazon Athena, Data Modeling</p>
+                </div>
+            </div>
+
+            <!-- Cloud -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Big Data & Streaming</h4>
+                    <p>Apache Spark, Databricks, Hadoop, HDFS, Hive, Kafka, Kafka Streams, Kafka Connect, AWS Kinesis, Apache Airflow, Apache Beam</p>
+                </div>
+            </div>
+
+            <!-- Databases -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Databases</h4>
+                    <p>MySQL, Oracle, SQL Server, MongoDB, DynamoDB, CosmosDB, PostgreSQL</p>
+                </div>
+            </div>
+
+            <!-- Frontend -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Containerization & DevOps</h4>
+                    <p>Docker, Kubernetes (EKS), AWS Fargate, Jenkins, Git, GitHub, Bitbucket, Terraform, CI/CD Pipelines</p>
+                </div>
+            </div>
+
+            <!-- Monitoring & Security -->
+            <div class="col-lg-4 col-md-6 mb-30">
+                <div class="skill-box">
+                    <h4>Monitoring & Logging</h4>
+                    <p>ElasticSearch, ELK Stack, Prometheus, Grafana, Splunk, AWS CloudWatch</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- End Skills -->
+
+                            <!-- End Single Item -->
+
+                            <!-- Single Item -->
+                            <div class="about-item">
+                                <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                                <ul class="education-table">
+                                    <li>
+                                        <h4>Master’s in Information Technology</h4>
+                                        <h5>Lindsey Wilson University, Kentucky, USA</h5>
+                                        <span>Graduate</span>
+                                        <p>
+                                            Advanced studies in software engineering,
+                                            distributed systems, and cloud technologies.
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- End Single Item -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End About -->
+
+        <!-- Start Project
+        ============================================= -->
+
+        <!-- End Project -->
+
+
+
+
+
+
+       <!-- Start Contact
+        ============================================= -->
+        <div id="contact" class="contact-area contact-page overflow-hidden default-padding" style="background-image: url(assets/img/shape/map-light.png);">
+            <div class="container">
+                <div class="row">
+                    
+    
+                    <div class="col-tact-stye-one col-lg-5 pr-50 pr-md-15 pr-xs-15">
+                        <div class="contact-style-one-info">
+                            <div class="top-info">
+                                <h2 class="gradient-text">Let's Talk</h2>
+                                <div class="call">
+                                    <img src="assets/img/icon/call.png" alt="Image not Found">
+                                    <a class="phone-link" href="tel:+1251610-5659">+1 (251) 610-5659</a>
+                                </div>
+                            </div>
+                            <ul class="contact-address">
+                                <li>
+                                    <div class="info">
+                                        <h4>Location</h4>
+                                        <p>
+                                            55 Main Street, The Grand Avenue <br> 2nd Block, New York City
+                                        </p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info">
+                                        <h4>Official Email</h4>
+                                        <a href="mailto:jayasimhagoudd@gmail.com">jayasimhagoudd@gmail.com</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p class="copyright">
+                                &copy; 2026 SUDHEEKSHITHA. All Rights Reserved
+                            </p>
+                        </div>
+                    </div>
+    
+                    <div class="col-tact-stye-one col-lg-7 pl-60 pl-md-15 pl-xs-15 mt-md-50 mt-xs-50">
+                        <div class="contact-form-style-one">
+                            <form action="https://formspree.io/f/mnjvreay" method="POST" class="contact-form contact-form mt-30">
+                              
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group">
+                                            <input class="form-control" id="name" name="name" placeholder="Name" type="text">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="email" name="email" placeholder="Email*" type="email">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <input class="form-control" id="phone" name="phone" placeholder="Phone" type="text">
+                                            <span class="alert-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="form-group comments">
+                                            <textarea class="form-control" id="comments" name="comments" placeholder="Tell Us About Project *"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <button type="submit" name="submit" id="submit">
+                                            <i class="fa fa-paper-plane"></i> Get in Touch
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- Alert Message -->
+                                <div class="col-lg-12 alert-notification">
+                                    <div id="message" class="alert-msg"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+        <!-- End Signle Item -->
     </div>
 
 
@@ -1323,7 +1262,7 @@
     <script src="assets/js/YTPlayer.min.js"></script>
     <script src="assets/js/validnavs.js"></script>
     <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/typed.js"></script>
     <script src="assets/js/TweenMax.min.js"></script>
     <script src="assets/js/main.js"></script>
 
